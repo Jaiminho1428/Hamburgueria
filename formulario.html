@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulário de Pedido</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>Formulário de Pedido</h1>
+      
+        <nav>
+            <a class="btn-voltar" href="index.html" aria-label="Voltar ao início">Voltar ao início</a>
+        </nav>
+    </div>
+    <main>
+        <form id="pedidoForm" action="#" method="post">
+            <div class="resumo-pedido" aria-live="polite">
+                <h3 id="produtoNome">Produto: —</h3>
+                <p id="produtoDesc" class="descricao">Descrição: —</p>
+                <p id="produtoPreco" class="preco">Preço: —</p>
+            </div>
+
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="pedido">Pedido (detalhes)</label>
+            <textarea id="pedido" name="pedido" required></textarea>
+
+            <label for="acompanhamentos">Acompanhamentos</label>
+            <input type="text" id="acompanhamentos" name="acompanhamentos">
+
+            <label for="observacoes">Observações</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+
+        
+            <input type="hidden" id="produtoHidden" name="produto">
+            <input type="hidden" id="precoHidden" name="preco">
+
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
