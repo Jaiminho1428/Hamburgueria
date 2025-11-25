@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Login - Hamburgueria</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>Entrar</h1>
+        <nav>
+            <a class="btn-voltar" href="index.html">Voltar ao início</a>
+        </nav>
+    </div>
+
+    <main>
+        <form id="loginForm" class="form-login" action="#" method="post">
+
+            <label for="login">E-mail ou telefone</label>
+            <input type="text" id="login" name="login" required>
+
+            <label for="loginSenha">Senha</label>
+            <!-- ALTERADO: id="senha" -> id="loginSenha" -->
+            <input type="password" id="loginSenha" name="senha" required>
+
+            <button type="submit" class="btn-padrao">Entrar</button>
+
+            <p class="link-criar">Não tem conta? <a href="cadastro.html">Criar nova conta</a></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

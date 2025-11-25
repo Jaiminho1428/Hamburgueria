@@ -64,3 +64,74 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+// --- SALVAR CADASTRO DO USUÁRIO ---
+const cadastroForm = document.getElementById("cadastroForm");
+
+if (cadastroForm) {
+    cadastroForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const usuario = {
+            nome: document.getElementById("nome").value,
+            email: document.getElementById("email").value,
+            telefone: document.getElementById("telefone").value,
+            senha: document.getElementById("senha").value,
+            endereco: document.getElementById("endereco").value,
+            cep: document.getElementById("cep").value,
+            bairro: document.getElementById("bairro").value,
+            numero: document.getElementById("numero").value,
+            complemento: document.getElementById("complemento").value,
+            referencia: document.getElementById("referencia").value
+        };
+
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+
+        // Redirecionar após cadastrar
+        window.location.href = "cardapio.html";
+    });
+}
+// --- LOGIN ---
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+    loginForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const login = document.getElementById("login").value;
+        const senha = document.getElementById("loginSenha").value;
+
+        const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+
+        if (!usuarioSalvo) {
+            alert("Nenhuma conta cadastrada!");
+            return;
+        }
+
+        if (
+            (login === usuarioSalvo.email || login === usuarioSalvo.telefone) &&
+            senha === usuarioSalvo.senha
+        ) {
+            window.location.href = "cardapio.html";
+        } else {
+            alert("Login incorreto!");
+        }
+    });
+}
+// --- AUTO-PREENCHER FORMULÁRIO DE PEDIDOS ---
+function preencherFormularioPedido() {
+    const usuario = JSON.parse(localStorage.getItem("usuario"));
+    if (!usuario) return;
+
+    const ids = [
+        "nome", "email", "telefone",
+        "endereco", "cep", "bairro",
+        "numero", "complemento", "referencia"
+    ];
+
+    ids.forEach(id => {
+        let campo = document.getElementById(id);
+        if (campo) campo.value = usuario[id] || "";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", preencherFormularioPedido);
