@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Hamburgueria</title>
+    <title>Burguer City
+      
+    </title>
 </head>
 <body>
     <div class="menu">
 
-        <h1>Hamburgueria</h1>
+        <h1>Burguer City
+          
+        </h1>
 
         <nav>
            
             <ul>
-                <li><a href="index.html">Início</a></li>
+               
                 <li><a href="Cardapio.html">Cardápio</a></li>
                 <li><a href="Contato.html">Contato</a></li>
             </ul>
@@ -24,19 +28,41 @@
 
     <div class="Inicio">
 
-    <h2>Bem-vindo à Hamburgueria!</h2>
+    <h2>Ofertas do dia!</h2>
 
-    </div>  
-    
-  
+    <div class="gridOferta">
+        <article class="cartaoOferta">
+          <img src="imagens/Classico.png" alt="Hambúrguer Clássico">
+          <h3>Hambúrguer Clássico</h3>
+          <p class="preco">R$ 19,90</p>
+          <button class="btn-pedir" onclick="pedir(this)">Pedir</button>
+        </article>
 
-<div class="parent">
-        <div class="div4"><</div>
-    <div class="div8">8</div>
-    <div class="div9">9</div>
-</div>
+        <article class="cartaoOferta">
+          <img src="imagens/CheddarBacon.png" alt="Cheddar Bacon">
+          <h3>Cheddar Bacon</h3>
+          <p class="preco">R$ 24,50</p>
+          <button class="btn-pedir" onclick="pedir(this)">Pedir</button>
+        </article>
+
+        <article class="cartaoOferta">
+          <img src="imagens/vegano.png" alt="Veggie Special">
+          <h3>Veggie Special</h3>
+          <p class="preco">R$ 17,00</p>
+          <button class="btn-pedir" onclick="pedir(this)">Pedir</button>
+        </article>
+
+        <article class="cartaoOferta">
+          <img src="imagens/Orion.png" alt="Duplo Sabor">
+          <h3>Duplo Sabor</h3>
+          <p class="preco">R$ 29,90</p>
+          <button class="btn-pedir" onclick="pedir(this)">Pedir</button>
+        </article>
+        
+      </div>
+    </section>
     
-    
-    
+
+<script src="script.js"></script>
 </body>
 </html>

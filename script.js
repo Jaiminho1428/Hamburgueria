@@ -19,7 +19,7 @@ function pedir(button) {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    if (!document.getElementById('pedidoForm')) return; // só 
+    if (!document.getElementById('pedidoForm')) return; 
 
     const params = new URLSearchParams(window.location.search);
     const nomeProduto = params.get('nomeProduto') || '';
