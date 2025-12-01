@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Hamburgueria</title>
+    <title>Burguer City</title>
 </head>
 <body>
     <div class="menu">
-        <h1>Hamburgueria</h1>
+        <h1>Burguer City</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                 <li><a href="Contato.html">Contato</a></li>
-              
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+                <li><a href="perfil.html" id="linkPerfilCardapio">Perfil</a></li>
+                <li><a href="#" id="sairCardapio">Sair</a></li>
             </ul>
         </nav>
     </div>
@@ -48,7 +50,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="imagens/Orion.png" alt="Duplo Sabor">
+                    <img src="imagens/duplosabor.jpg" alt="Duplo Sabor">
                     <h3>Duplo Sabor</h3>
                     <p class="descricao">Dois burgers 120g, queijo, alface e molho especial.</p>
                     <p class="preco">R$ 29,90</p>
@@ -56,7 +58,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="" alt="BBQ Onion">
+                    <img src="imagens/Orion.png" alt="BBQ Onion">
                     <h3>BBQ Onion</h3>
                     <p class="descricao">Molho barbecue, onion rings, queijo derretido.</p>
                     <p class="preco">R$ 26,00</p>
@@ -64,7 +66,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="" alt="Frango Crocante">
+                    <img src="imagens/frango.jpg" alt="Frango Crocante">
                     <h3>Frango Crocante</h3>
                     <p class="descricao">Peito empanado, alface, maionese temperada e picles.</p>
                     <p class="preco">R$ 22,50</p>
@@ -78,7 +80,7 @@
             <h2>Refrigerantes & Bebidas</h2>
             <div class="gridOferta">
                 <article class="cartaoOferta">
-                    <img src="images/CocaCola.png" alt="Coca-Cola">
+                    <img src="imagens/coca.jpg" alt="Coca-Cola">
                     <h3>Coca‑Cola (350ml)</h3>
                     <p class="descricao">Gelo opcional.</p>
                     <p class="preco">R$ 6,50</p>
@@ -86,7 +88,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Guarana.png" alt="Guaraná">
+                    <img src="imagens/guaraná.jpg" alt="Guaraná">
                     <h3>Guaraná (350ml)</h3>
                     <p class="descricao">Refrescante e gelado.</p>
                     <p class="preco">R$ 6,00</p>
@@ -94,7 +96,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Aguinha.png" alt="Água">
+                    <img src="imagens/água.jpg" alt="Água">
                     <h3>Água Mineral</h3>
                     <p class="descricao">500ml — sem gás ou com gás.</p>
                     <p class="preco">R$ 4,50</p>
@@ -102,7 +104,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Milkshake.png" alt="Milkshake">
+                    <img src="imagens/milkshake.jpg" alt="Milkshake">
                     <h3>Milkshake (200ml)</h3>
                     <p class="descricao">Baunilha, chocolate ou morango.</p>
                     <p class="preco">R$ 12,00</p>
@@ -116,7 +118,7 @@
             <h2>Acompanhamentos</h2>
             <div class="gridOferta">
                 <article class="cartaoOferta">
-                    <img src="images/BatataFrita.png" alt="Batata Frita">
+                    <img src="imagens/batata.jpg" alt="Batata Frita">
                     <h3>Batata Frita</h3>
                     <p class="descricao">Porção média crocante.</p>
                     <p class="preco">R$ 9,90</p>
@@ -124,7 +126,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/OnionRings.png" alt="Onion Rings">
+                    <img src="imagens/onion.jpg" alt="Onion Rings">
                     <h3>Onion Rings</h3>
                     <p class="descricao">Cebolas empanadas, porção para compartilhar.</p>
                     <p class="preco">R$ 11,50</p>
@@ -132,7 +134,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Nuggets.png" alt="Nuggets">
+                    <img src="imagens/nuggets.jpg" alt="Nuggets">
                     <h3>Nuggets</h3>
                     <p class="descricao">Porção com molho especial.</p>
                     <p class="preco">R$ 13,00</p>
@@ -140,7 +142,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Salada.png" alt="Salada">
+                    <img src="imagens/salada.jpg" alt="Salada">
                     <h3>Salada Fresca</h3>
                     <p class="descricao">Mix de folhas, tomate e molho leve.</p>
                     <p class="preco">R$ 9,00</p>
@@ -154,7 +156,7 @@
             <h2>Sobremesas</h2>
             <div class="gridOferta">
                 <article class="cartaoOferta">
-                    <img src="images/Brownie.png" alt="Brownie">
+                    <img src="imagens/brownie.jpg" alt="Brownie">
                     <h3>Brownie</h3>
                     <p class="descricao">Brownie quentinho com calda.</p>
                     <p class="preco">R$ 9,50</p>
@@ -162,7 +164,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/Sundae.png" alt="Sundae">
+                    <img src="/imagens/sundae.jpg" alt="Sundae">
                     <h3>Sundae</h3>
                     <p class="descricao">Sorvete, calda e farofa crocante.</p>
                     <p class="preco">R$ 10,50</p>
@@ -170,7 +172,7 @@
                 </article>
 
                 <article class="cartaoOferta">
-                    <img src="images/BoloChocolate.png" alt="Bolo de Chocolate">
+                    <img src="imagens/bolo.jpg" alt="Bolo de Chocolate">
                     <h3>Bolo de Chocolate</h3>
                     <p class="descricao">Fatia servida com chantilly.</p>
                     <p class="preco">R$ 8,50</p>

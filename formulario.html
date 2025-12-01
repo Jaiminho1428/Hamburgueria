@@ -9,21 +9,51 @@
 <body>
     <div class="menu">
         <h1>Formulário de Pedido</h1>
-      
         <nav>
-            <a class="btn-voltar" href="index.html" aria-label="Voltar ao início">Voltar ao início</a>
+            <a class="btn-voltar" href="index.html">Voltar ao início</a>
         </nav>
     </div>
+
     <main>
         <form id="pedidoForm" action="#" method="post">
-            <div class="resumo-pedido" aria-live="polite">
+
+            <!-- RESUMO DO PRODUTO -->
+            <div class="resumo-pedido">
                 <h3 id="produtoNome">Produto: —</h3>
                 <p id="produtoDesc" class="descricao">Descrição: —</p>
                 <p id="produtoPreco" class="preco">Preço: —</p>
             </div>
 
-            <label for="nome">Seu nome</label>
+            <h2 class="titulo-section">Seus dados</h2>
+
+            <label for="nome">Nome completo</label>
             <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" required>
+
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro" required>
+
+            <label for="numero">Número</label>
+            <input type="text" id="numero" name="numero" required>
+
+            <label for="complemento">Complemento</label>
+            <input type="text" id="complemento" name="complemento">
+
+            <label for="referencia">Ponto de referência</label>
+            <input type="text" id="referencia" name="referencia">
+
+            <h2 class="titulo-section">Detalhes do Pedido</h2>
 
             <label for="pedido">Pedido (detalhes)</label>
             <textarea id="pedido" name="pedido" required></textarea>
@@ -34,13 +64,15 @@
             <label for="observacoes">Observações</label>
             <textarea id="observacoes" name="observacoes"></textarea>
 
-        
+            <!-- HIDDEN INPUTS -->
             <input type="hidden" id="produtoHidden" name="produto">
             <input type="hidden" id="precoHidden" name="preco">
 
-            <button type="submit">Enviar Pedido</button>
+            <button type="submit" class="btn-padrao">Enviar Pedido</button>
         </form>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
+

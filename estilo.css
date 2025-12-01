@@ -59,6 +59,27 @@ body{
 }
 
 
+.Inicio {
+    text-align: center;
+    padding: 40px 16px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.Inicio h2 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    color: var(--text);
+    font-weight: 700;
+}
+
+.Inicio p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+
 .ofertas{
     padding: 32px 16px;
     max-width: var(--max-width);
@@ -297,4 +318,44 @@ form input, form textarea { min-height:36px; }
 
 .pedido-toast[style*="opacity: 0"]{
     transform: translateY(8px);
+}
+
+.toast-erro {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#linkPerfil,
+#linkPerfilCardapio,
+#sair,
+#sairCardapio {
+    display: none;
+}
+
+#linkPerfil[style*="display: inline-block"],
+#linkPerfilCardapio[style*="display: inline-block"],
+#sair[style*="display: inline-block"],
+#sairCardapio[style*="display: block"] {
+    display: inline-block !important;
 }

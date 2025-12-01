@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Burguer City</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>Meu Perfil</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="Contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="perfil-container">
+            <h2 id="nomeUsuario"></h2>
+            
+            <div class="perfil-info">
+                <p><strong>E-mail:</strong> <span id="emailUsuario"></span></p>
+                <p><strong>Telefone:</strong> <span id="telefoneUsuario"></span></p>
+                <p><strong>Endereço:</strong> <span id="enderecoUsuario"></span></p>
+                <p><strong>CEP:</strong> <span id="cepUsuario"></span></p>
+                <p><strong>Bairro:</strong> <span id="bairroUsuario"></span></p>
+                <p><strong>Número:</strong> <span id="numeroUsuario"></span></p>
+                <p><strong>Complemento:</strong> <span id="complementoUsuario"></span></p>
+                <p><strong>Ponto de Referência:</strong> <span id="referenciaUsuario"></span></p>
+            </div>
+
+            <button id="btnSair" class="btn-padrao">Sair da Conta</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        if (!localStorage.getItem('usuarioCadastrado')) {
+            window.location.href = "login.html";
+        } else {
+            const usuarioData = JSON.parse(localStorage.getItem('usuarioData'));
+            
+            if (usuarioData) {
+                document.getElementById('nomeUsuario').textContent = usuarioData.nome;
+                document.getElementById('emailUsuario').textContent = usuarioData.email;
+                document.getElementById('telefoneUsuario').textContent = usuarioData.telefone;
+                document.getElementById('enderecoUsuario').textContent = usuarioData.endereco;
+                document.getElementById('cepUsuario').textContent = usuarioData.cep;
+                document.getElementById('bairroUsuario').textContent = usuarioData.bairro;
+                document.getElementById('numeroUsuario').textContent = usuarioData.numero;
+                document.getElementById('complementoUsuario').textContent = usuarioData.complemento || 'N/A';
+                document.getElementById('referenciaUsuario').textContent = usuarioData.referencia;
+            }
+
+            document.getElementById('btnSair').addEventListener('click', function() {
+                localStorage.removeItem('usuarioCadastrado');
+                localStorage.removeItem('usuarioData');
+                window.location.href = "login.html";
+            });
+        }
+    </script>
+</body>
+</html>
